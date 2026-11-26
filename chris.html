@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chris Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Tide: deep navy, one page. */
+:root{
+  --bg:#0c1b2b; --panel:#132a40; --fg:#e4eef5; --muted:#8fa7ba; --accent:#5fc4d0; --accent2:#f0a35e; --rule:#24415c;
+  --display:"Libre Caslon Text",Georgia,serif; --dw:700;
+  --body:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background-color:var(--bg);color:var(--fg);font-family:var(--body);font-size:1.0625rem;line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:920px;margin:0 auto;padding-block:1.5rem 4rem}
+a{color:var(--fg);text-decoration-color:var(--accent);text-underline-offset:4px}
+a:hover{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+p.mono{margin:0}
+
+header.top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem 2rem;flex-wrap:wrap;padding-bottom:1rem;border-bottom:1px solid var(--rule)}
+header.top nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+header.top nav a{text-decoration:none;color:var(--muted)}
+header.top nav a:hover{color:var(--fg)}
+
+.intro{padding-block:3.5rem 3.5rem;max-width:640px}
+h1{font-family:var(--display);font-weight:var(--dw);font-size:clamp(2.6rem,8vw,4.4rem);line-height:1.05;margin:.75rem 0 1.25rem}
+.lede{font-family:var(--display);font-weight:400;font-style:italic;font-size:1.3rem;line-height:1.5;margin:0 0 1.5rem;max-width:32ch}
+.small{color:var(--muted);margin:0;max-width:52ch}
+
+section{display:grid;grid-template-columns:170px minmax(0,1fr);gap:2rem;padding-block:2.5rem;border-top:1px solid var(--rule)}
+section>h2{margin:.35rem 0 0;font-weight:500}
+h3{font-family:var(--display);font-weight:var(--dw);font-size:1.25rem;margin:0 0 .25rem}
+section p{margin:0 0 1rem;max-width:62ch}
+.rows,.tracks{list-style:none;margin:0;padding:0}
+.rows li{padding-block:1.25rem;border-bottom:1px solid var(--rule)}
+.rows li:first-child{padding-top:0}
+.rows li:last-child{border-bottom:0;padding-bottom:0}
+.rows li p{margin:0;color:var(--muted)}
+.rows li.hl{border-left:3px solid var(--accent2);padding-left:1.25rem}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 2rem;list-style:none;margin:0;padding:0}
+.facts li{padding-block:.7rem;border-bottom:1px solid var(--rule)}
+
+.tracks{counter-reset:t;margin-top:1.5rem}
+.tracks li{counter-increment:t;display:grid;grid-template-columns:2rem minmax(0,1fr) auto;gap:1rem;padding-block:.9rem;border-bottom:1px solid var(--rule);align-items:baseline}
+.tracks li::before{content:counter(t);font-family:var(--mono);color:var(--accent)}
+.tracks .mono{text-align:right}
+.watch{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,220px);gap:2.5rem;align-items:start}
+figure{margin:0}
+figure svg{display:block;width:100%;height:auto;max-width:100%;background:var(--panel);border:1px solid var(--rule)}
+figure img{display:block;width:100%;height:auto;max-width:100%;border:1px solid var(--rule)}
+figcaption{margin-top:.75rem}
+h4{margin:2rem 0 0;font-weight:500}
+
+footer{padding-top:2rem;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+@media(max-width:720px){
+  section{grid-template-columns:1fr;gap:.75rem}
+  .facts{grid-template-columns:1fr}
+  .watch{grid-template-columns:1fr}
+  figure{max-width:260px}
+  .tracks li{grid-template-columns:2rem minmax(0,1fr)}
+  .tracks .mono{grid-column:2;text-align:left}
+  .intro{padding-block:2.5rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <span class="mono">Chris</span>
+    <nav class="mono" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#studies">Studies</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#movies">Movies &amp; Music</a>
+    </nav>
+  </header>
+
+  <div class="intro">
+    <p class="mono">Aquatic Science student</p>
+    <h1>Chris</h1>
+    <p class="lede">I study water and what lives in it, and I like doing things properly.</p>
+    <p class="small">I'm a student at Jomo Kenyatta University of Agriculture and Technology (JKUAT), studying aquatic science. This page is a short tour of who I am: what I study, what I do when I'm not studying, and what I watch and listen to.</p>
+  </div>
+
+  <section id="about">
+    <h2 class="mono">About</h2>
+    <div>
+      <p>I'm drawn to lakes, rivers, fish farms and the coast, and to the questions about how healthy water keeps people fed. I like fieldwork, I like data, and I like explaining what I find in plain words.</p>
+      <p>Outside class I'm a fan of period drama, good music and long conversations about both.</p>
+      <ul class="facts">
+        <li><span class="mono">Studying</span><br>Aquatic Science</li>
+        <li><span class="mono">University</span><br>JKUAT, Kenya</li>
+        <li><span class="mono">Languages</span><br>English, Swahili</li>
+        <li><span class="mono">Interested in</span><br>Aquaculture, water quality</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="studies">
+    <h2 class="mono">Studies</h2>
+    <ul class="rows">
+      <li><h3>Aquaculture</h3><p>Raising fish and other water animals for food: ponds, tanks, feed and keeping stock healthy.</p></li>
+      <li><h3>Water quality</h3><p>Measuring oxygen, temperature, pH and nutrients, and reading what the numbers say about a water body.</p></li>
+      <li><h3>Fisheries and ecology</h3><p>How fish populations live, grow and are managed, and how lakes and rivers work as ecosystems.</p></li>
+    </ul>
+  </section>
+
+  <section id="hobbies">
+    <h2 class="mono">Hobbies</h2>
+    <ul class="rows">
+      <li class="hl"><h3>Peaky Blinders</h3><p>The one I come back to. The suits, the slow walks, the speeches that make a room go quiet. I watch it for the writing as much as the style, and I notice that Tommy always did the planning first.</p></li>
+      <li><h3>Music</h3><p>I always have something playing while I study. My current playlist is just below.</p></li>
+      <li><h3>Time outdoors</h3><p>Walks, water and open space. It's the best way I know to clear my head.</p></li>
+    </ul>
+  </section>
+
+  <section id="movies">
+    <h2 class="mono">Movies &amp; Music</h2>
+    <div>
+      <div class="watch">
+        <ul class="rows">
+          <li class="hl"><h3>Peaky Blinders</h3><p>Birmingham, 1919 onwards. Family, loyalty and a lot of smoke. Start from the first episode.</p></li>
+          <li><h3>Blue Planet II</h3><p>A documentary series about the oceans. It's what I'd show anyone who asks why I study water.</p></li>
+        </ul>
+        <figure>
+          <img src="blinders.png" alt="Peaky Blinders">
+          <figcaption class="mono">By order of the Peaky Blinders</figcaption>
+        </figure>
+      </div>
+      <h4 class="mono">Playlist</h4>
+      <ol class="tracks">
+        <li><span>Red Right Hand</span><span class="mono">Nick Cave &amp; The Bad Seeds</span></li>
+        <li><span>Do I Wanna Know?</span><span class="mono">Arctic Monkeys</span></li>
+        <li><span>Black Betty</span><span class="mono">Ram Jam</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <footer class="mono"><span>Chris</span><span>Aquatic Science, JKUAT</span></footer>
+</div>
+
+
+</html>
